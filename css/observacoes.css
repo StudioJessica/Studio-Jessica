@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: rgb(96, 84, 69);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container padrão */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: rgb(63, 54, 42);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Menu Desktop */
+.menu-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-desktop ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu-desktop ul li a:hover {
+    color: #ddd;
+}
+
+/* Botão Contato */
+.btn-contato button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.btn-contato button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Menu toggle para mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menu Mobile */
+.menu-mobile {
+    display: none;
+    background-color: rgb(63, 54, 42);
+    padding: 10px 20px;
+}
+
+.menu-mobile.active {
+    display: block;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-mobile ul li {
+    padding: 10px 0;
+}
+
+.menu-mobile ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero-site {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-site::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(../img/cilios\ fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Zig-Zag Containers */
+.zig-zag-container {
+    margin: 40px 10px;
+    max-width: 100%;
+}
+
+.zig-zag-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.zig-zag-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.zig-zag-container ul {
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+}
+
+.zig-zag-container ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Títulos especiais */
+.cuidados,
+.politica,
+.restricao,
+.informacao {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(96, 84, 69);
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .zig-zag-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .cuidados,
+    .politica,
+    .restricao,
+    .informacao {
+        font-size: 1.6rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-site {
+        padding-top: 40px;
+    }
+
+    .zig-zag-container {
+        margin: 20px;
+    }
+
+    .zig-zag-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .zig-zag-container p {
+        font-size: 1rem;
+    }
+
+    .cuidados,
+    .politica,
+    .restricao,
+    .informacao {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .zig-zag-container {
+        margin: 10px 0;
+    }
+
+    .cuidados,
+    .politica,
+    .restricao,
+    .informacao {
+        font-size: 1.2rem;
+    }
+}
