@@ -1,5 +1,5 @@
 <h1 align="center">Olá 👋, eu sou o Fábio</h1>
-<h3 align="center">Um desenvolvedor frontend apaixonado de Brasília</h3>
+<h3 align="center">Um desenvolvedor frontend de Brasília</h3>
 
 - 🔭 Atualmente estou trabalhando no **site**
 
